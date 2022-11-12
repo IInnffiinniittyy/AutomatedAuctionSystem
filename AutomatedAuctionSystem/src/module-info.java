@@ -6,4 +6,5 @@
  *
  */
 module automatedAuctionSystem {
+	requires java.sql;
 }

@@ -1,10 +1,13 @@
 package com.AuctionApp.Exceptions;
 
-public class BuyerException {
+public class BuyerException extends Exception{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public BuyerException() {
+		super();
+	}
+	
+    public BuyerException(String message) {
+		super(message);
 	}
 
 }

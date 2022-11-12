@@ -1,9 +1,13 @@
 package com.AuctionApp.Exceptions;
 
-public class SellerException {
+public class SellerException extends Exception{
 
-	public static void main(String[] args) {
-		
+	public SellerException() {
+		super();
+	}
+	
+    public SellerException(String message) {
+		super(message);
 	}
 
 }

@@ -1,10 +1,13 @@
 package com.AuctionApp.Exceptions;
 
-public class AdministratorException {
+public class AdministratorException extends Exception{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public AdministratorException() {
+		super();
+	}
+	
+    public AdministratorException(String message) {
+		super(message);
 	}
 
 }

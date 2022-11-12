@@ -17,6 +17,15 @@ public class Administrator {
 		this.aEmail = aEmail;
 		this.aPassword = aPassword;
 	}
+	
+	// As aID is auto_Incremented in MySQL table...
+	
+	public Administrator(String aName, String aEmail, String aPassword) {
+		super();
+		this.aName = aName;
+		this.aEmail = aEmail;
+		this.aPassword = aPassword;
+	}
 
 	public int getaID() {
 		return aID;

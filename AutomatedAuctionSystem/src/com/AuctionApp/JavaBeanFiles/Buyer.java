@@ -18,6 +18,15 @@ public class Buyer {
 		this.bEmail = bEmail;
 		this.bPassword = bPassword;
 	}
+	
+	// As bID is auto_Incremented in MySQL table...
+	
+	public Buyer(String bName, String bEmail, String bPassword) {
+		super();
+		this.bName = bName;
+		this.bEmail = bEmail;
+		this.bPassword = bPassword;
+	}
 
 	public int getbID() {
 		return bID;

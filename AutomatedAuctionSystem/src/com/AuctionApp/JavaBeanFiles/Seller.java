@@ -18,6 +18,16 @@ public class Seller {
 		this.sEmail = sEmail;
 		this.sPassword = sPassword;
 	}
+	
+	// As sID is auto_Incremented in MySQL table...
+	
+	public Seller(String sName, String sEmail, String sPassword) {
+		super();
+		this.sName = sName;
+		this.sEmail = sEmail;
+		this.sPassword = sPassword;
+	}
+	
 
 	public int getsID() {
 		return sID;

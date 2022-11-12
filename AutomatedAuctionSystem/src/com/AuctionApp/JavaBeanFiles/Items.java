@@ -22,6 +22,17 @@ public class Items {
 		this.iQuantity = iQuantity;
 		this.sID = sID;
 	}
+	
+	// As iID is auto_Incremented in MySQL table...
+	public Items(String iName, String iCategory, int iPrice, int iQuantity, int sID) {
+		super();
+		this.iName = iName;
+		this.iCategory = iCategory;
+		this.iPrice = iPrice;
+		this.iQuantity = iQuantity;
+		this.sID = sID;
+	}
+	
 
 	public int getiId() {
 		return iId;

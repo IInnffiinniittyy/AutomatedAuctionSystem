@@ -1,7 +1,5 @@
 package com.AuctionApp.Dao;
 
-public class AdministratorDao {
+public interface AdministratorDao {
 
-	
-	
 }

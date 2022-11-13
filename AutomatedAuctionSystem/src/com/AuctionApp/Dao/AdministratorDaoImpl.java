@@ -10,9 +10,11 @@ import java.util.List;
 import com.AuctionApp.Exceptions.AdministratorException;
 import com.AuctionApp.Exceptions.BuyerException;
 import com.AuctionApp.Exceptions.SellerException;
+import com.AuctionApp.Exceptions.SoldItemsDTOException;
 import com.AuctionApp.JavaBeanFiles.Administrator;
 import com.AuctionApp.JavaBeanFiles.Buyer;
 import com.AuctionApp.JavaBeanFiles.Seller;
+import com.AuctionApp.JavaBeanFiles.SoldItemsDTO;
 import com.AuctionApp.Utility.DBUtil;
 
 public class AdministratorDaoImpl implements AdministratorDao {
@@ -91,6 +93,31 @@ public class AdministratorDaoImpl implements AdministratorDao {
 		  System.out.println(e.getMessage());
 		}
 		 return sellers;
+	}
+
+	@Override
+	public List<SoldItemsDTO> ViewSellingReport() throws SoldItemsDTOException {
+		
+		List<SoldItemsDTO> solditems = new ArrayList<>();
+		try (Connection conn = DBUtil.provideConnection()){
+		    PreparedStatement ps = conn.prepareStatement("Select * from SoldItems");
+		    ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			int id = rs.getInt("solditemId");
+			String n = rs.getString("soldItemName");
+			int p = rs.getInt("iPrice");
+			int q = rs.getInt("iQuantity");
+			String c = rs.getString("iCategory");
+			int bid = rs.getInt("bID");
+			SoldItemsDTO sold =  new SoldItemsDTO(id, n, p, q, c, bid);
+			solditems.add(sold);
+		}
+				
+		} catch (SQLException e) {
+		  System.out.println(e.getMessage());
+		}
+		 return solditems;
+		
 	}
 
 

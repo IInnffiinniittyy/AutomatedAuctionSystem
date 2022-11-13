@@ -4,9 +4,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.AuctionApp.Exceptions.AdministratorException;
+import com.AuctionApp.Exceptions.BuyerException;
+import com.AuctionApp.Exceptions.SellerException;
 import com.AuctionApp.JavaBeanFiles.Administrator;
+import com.AuctionApp.JavaBeanFiles.Buyer;
+import com.AuctionApp.JavaBeanFiles.Seller;
 import com.AuctionApp.Utility.DBUtil;
 
 public class AdministratorDaoImpl implements AdministratorDao {
@@ -43,6 +49,48 @@ public class AdministratorDaoImpl implements AdministratorDao {
 		
 		
 		return admin;
+	}
+
+	@Override
+	public List<Buyer> viewRegisteredBuyerList() throws BuyerException {
+		List<Buyer> buyers = new ArrayList<>();
+		try (Connection conn = DBUtil.provideConnection()){
+		    PreparedStatement ps = conn.prepareStatement("Select * from Buyer");
+		    ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			int id = rs.getInt("bID");
+			String n = rs.getString("bName");
+			String e = rs.getString("bEmail");
+			String p = rs.getString("bPassword");
+			Buyer buyer = new Buyer(id, n, e, p);
+			buyers.add(buyer);
+		}
+				
+		} catch (SQLException e) {
+		  System.out.println(e.getMessage());
+		}
+		 return buyers;
+	}
+
+	@Override
+	public List<Seller> ViewRegisteredSellerList() throws SellerException {
+		List<Seller> sellers = new ArrayList<>();
+		try (Connection conn = DBUtil.provideConnection()){
+		    PreparedStatement ps = conn.prepareStatement("Select * from Seller");
+		    ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			int id = rs.getInt("sID");
+			String n = rs.getString("sName");
+			String e = rs.getString("sEmail");
+			String p = rs.getString("sPassword");
+			Seller seller = new Seller(id, n, e, p);
+			sellers.add(seller);
+		}
+				
+		} catch (SQLException e) {
+		  System.out.println(e.getMessage());
+		}
+		 return sellers;
 	}
 
 }

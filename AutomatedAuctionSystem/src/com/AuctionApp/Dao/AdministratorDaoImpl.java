@@ -93,4 +93,5 @@ public class AdministratorDaoImpl implements AdministratorDao {
 		 return sellers;
 	}
 
+
 }

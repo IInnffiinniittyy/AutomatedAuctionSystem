@@ -12,6 +12,7 @@ import com.AuctionApp.JavaBeanFiles.Buyer;
 import com.AuctionApp.JavaBeanFiles.Seller;
 import com.AuctionApp.JavaBeanFiles.SoldItemsDTO;
 
+// It is an Application Software that is used for the buying and selling of products.
 
 public class MainFlow {
 

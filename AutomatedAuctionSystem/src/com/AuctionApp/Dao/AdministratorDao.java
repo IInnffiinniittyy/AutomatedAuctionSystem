@@ -13,6 +13,8 @@ import com.AuctionApp.JavaBeanFiles.SoldItemsDTO;
 
 public interface AdministratorDao {
 	
+	// In this Project Admin can...
+	
 	public Administrator loginAdministrator(String ausername, String apassword) throws AdministratorException;
 
 	public List<Buyer> viewRegisteredBuyerList()throws BuyerException;

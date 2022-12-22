@@ -7,7 +7,7 @@
 
 ![App Screenshot](https://github.com/IInnffiinniittyy/selective-memory-2410/blob/main/Assets/AUCTVERSE-LOGO.png)
 
-# Automated Auction System
+
 
 # Description
 Automated Auction System is fully automatic console application where you can perform different task for different roles like Admin , Products Seller and Product Buyer. It is used for buying and selling of products. This software can be used by the auction companies who arrange the Auction. Various buyers and sellers are registered in the Auction company. 

@@ -5,7 +5,7 @@
 # Unique Name : Auctverse
 # Logo : 
 
-![App Screenshot](https://github.com/IInnffiinniittyy/AutomatedAuctionSystem/blob/main/AutomatedAuctionSystem/AUCTVERSE-LOGO.png)
+![App Screenshot](https://github.com/IInnffiinniittyy/Assets/AUCTVERSE-LOGO.png)
 
 # Automated Auction System
 

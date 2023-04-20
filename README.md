@@ -10,7 +10,7 @@
 
 
 # Description
-Automated Auction System is fully automatic console application where you can perform different task for different roles like Admin , Products Seller and Product Buyer. It is used for buying and selling of products. This software can be used by the auction companies who arrange the Auction. Various buyers and sellers are registered in the Auction company. 
+The Automated Auction System is an entirely automated console application that allows for a variety of tasks to be performed by different users, including the Administrator, Product Seller, and Product Buyer roles. Its primary purpose is to facilitate the buying and selling of various items. Auction companies who organize auctions can employ this software, which includes registration for numerous buyers and sellers.
 
 # Technology Used
 - Core Java
